@@ -9,9 +9,9 @@ services:
       - db_data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_DB: vencilanding
+      POSTGRES_DB: athens
     ports:
-      - 54328:5432
+      - 54329:5432
 
   app:
     build: .
