@@ -891,6 +891,7 @@ a.back-to-top:focus {
 }
 
 .about-item {
+  padding: 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.17);
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -898,10 +899,16 @@ a.back-to-top:focus {
 
 .about-item .about-text {
   padding: 20px;
+  background: #fff;
 }
 
 .mt-35percent {
   margin-top: 35%;
+}
+
+.mt-0percent {
+  margin: 0% !important;
+  padding: 0% !important;
 }
 
 .about-item .about-text h3 {

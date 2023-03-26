@@ -43,8 +43,7 @@ def index():
             log.DEBUG,
             "Your application has been sent successfully! We will call you soon!",
         )
-        # return redirect("http://46.101.167.8/#registration")
-        return redirect("http://127.0.0.1:5000/#registration")
+        return redirect("https://www.stankov-pelekanos.info/#registration")
     
     elif form.is_submitted():
         for error in form.errors:
@@ -54,6 +53,5 @@ def index():
                     "Something went wrong... Please reload the page and try submitting an application again. ",
                     "danger",
                 )
-                return redirect("http://127.0.0.1:5000/#registration")
-                # return redirect("http://46.101.167.8/#registration")
+                return redirect("https://www.stankov-pelekanos.info/#registration")
     return render_template("index.html", form=form)

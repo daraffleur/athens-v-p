@@ -4,22 +4,21 @@ services:
   db:
     image: postgres
     restart: always
-    container_name: db
+    container_name: athens_db
     volumes:
       - db_data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: athens
     ports:
-      - 54329:5432
+      - ${DB_PORT}:5432
 
   app:
     build: .
     restart: always
-    container_name: app
-    # command: bash ./start_prod_server.sh
+    container_name: athens_app
     ports:
-      - 127.0.0.1:5000:5000
+      - 127.0.0.1:${WEB_PORT}:5000
     depends_on:
       - db
     volumes:
